@@ -4,7 +4,7 @@ class Car {
     carYear;
     distance;
     countOfFuel;
-    _master;
+    #_master;
 
     constructor(brand, model, carYear, distance, countOfFuel, master) {
             this.brand = brand;
@@ -12,7 +12,7 @@ class Car {
             this.carYear = carYear;
             this.distance = distance;
             this.countOfFuel = countOfFuel;
-            this._master = master;
+            this.#_master = master;
     };
 
     getConsumptionFuel() {
@@ -20,7 +20,7 @@ class Car {
     };
 
     get master() {
-        return this._master;
+        return this.#_master;
     };
 };
 
