@@ -19,11 +19,17 @@ class Car {
         return this.countOfFuel / this.distance * 100;
     };
 
-    get master() {
+    get getMaster() {
         return this.#_master;
+    };
+
+    set setMaster(name) {
+        this.#_master = name;
     };
 };
 
 const myCar = new Car('Toiota', 'Ipsum', '2004', 200, 20, 'Anna');
 console.log(myCar.getConsumptionFuel());
-console.log(myCar.master);
+console.log(`Владелец авто ${myCar.getMaster}`);
+myCar.setMaster = 'Maxim';
+console.log(`Владелец авто ${myCar.getMaster}`);
